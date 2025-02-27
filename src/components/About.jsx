@@ -41,7 +41,7 @@ const About = () => {
 
         <div className="flex-1 mt-4 md:mt-0">
           <p className="border-hidden rounded-xl mx-auto w-full  font-bold text-sm sm:text-base md:text-lg leading-relaxed text-left">
-            I want to be a fullstack developer well-versed in both frontend and
+            I want to be a fullstack developer well-versed in both frontend  and
             backend development. I am passionate about coding and aspire to
             develop applications that reach a wide audience. I want to acquire
             skills that will enable me to turn all my ideas into reality. I am
