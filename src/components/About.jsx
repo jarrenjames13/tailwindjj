@@ -40,13 +40,13 @@ const About = () => {
         />
 
         <div className="flex-1 mt-4 md:mt-0">
-          <p className="border-hidden rounded-xl mx-auto w-full  font-bold text-sm sm:text-base md:text-lg leading-relaxed text-left">
-            I want to be a fullstack developer well-versed in both frontend  and
-            backend development. I am passionate about coding and aspire to
-            develop applications that reach a wide audience. I want to acquire
-            skills that will enable me to turn all my ideas into reality. I am
-            open to exploring new technologies and use them to expand my
-            knowledge.
+          <p className="border-hidden rounded-xl mx-auto w-full font-bold text-sm sm:text-base md:text-lg leading-relaxed text-left">
+            I am a full-stack developer proficient in both frontend and backend
+            development. I am deeply passionate about coding and strive to
+            create applications that can reach and benefit a broad audience. My
+            goal is to continuously enhance my skills to transform innovative
+            ideas into reality. I am eager to explore emerging technologies and
+            leverage them to expand my expertise.
           </p>
 
           <div className="w-full mt-8">
@@ -63,8 +63,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    
-    
     </section>
   );
 };

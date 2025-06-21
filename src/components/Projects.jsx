@@ -2,64 +2,41 @@ import React from "react";
 
 const Projects = () => {
   return (
-    <div className="flex flex-col text-white items-center text-center py-6 gap-6 px-4" id="projects">
-      <h1 className="font-bold text-2xl sm:text-3xl">Projects and Services</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-6xl">
-        <div className="bg-green-700 px-4 py-5 rounded-lg hover:shadow-lg transform transition-transform duration-300 hover:scale-105 text-left">
-          <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#eeeb52] to-[#fbfcf3]">
-            Frontend Development
-          </h3>
-          <p className="mt-2 text-gray-300">
-            Building dynamic and responsive interfaces for seamless user
-            experiences.
+    <section
+      className="text-white flex flex-col items-center text-center bg-[#2d2e2d] py-6 px-4 h-auto"
+      id="projects"
+    >
+      <h1 className="text-[#c4fcc4] font-bold text-3xl sm:text-4xl md:text-5xl border-hidden rounded-2xl px-2 py-2">
+        My Projects
+      </h1>
+
+      <div className="flex flex-col md:flex-row items-center md:items-start w-full max-w-[1200px] mt-4 md:space-x-6">
+        <div className="flex-1 mt-4 md:mt-0">
+          <p className="border-hidden rounded-xl mx-auto w-full text-sm sm:text-base md:text-lg leading-relaxed text-left">
+            Here are some of the project/s I have worked on. Each project
+            showcases my skills in full-stack development, from frontend design
+            to backend functionality.
           </p>
-          <p className="mt-2">
-            <a href="#" className="text-gray-300 hover:text-white hover:underline">
-              Learn more
-            </a>
-          </p>
-        </div>
-        <div className="bg-green-700 px-4 py-5 rounded-lg hover:shadow-lg transform transition-transform duration-300 hover:scale-105 text-left">
-          <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#eeeb52] to-[#fbfcf3]">
-            Backend Development
-          </h3>
-          <p className="mt-2 text-gray-300">
-            Creating robust server-side solutions for efficient data management.
-          </p>
-          <p className="mt-2">
-            <a href="#" className="text-gray-300 hover:text-white hover:underline">
-              Learn more
-            </a>
-          </p>
-        </div>
-        <div className="bg-green-700 px-4 py-5 rounded-lg hover:shadow-lg transform transition-transform duration-300 hover:scale-105 text-left">
-          <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#eeeb52] to-[#fbfcf3]">
-            UI/UX Design
-          </h3>
-          <p className="mt-2 text-gray-300">
-            Designing user-centric interfaces that are both aesthetically pleasing and highly functional.
-          </p>
-          <p className="mt-2">
-            <a href="#" className="text-gray-300 hover:text-white hover:underline">
-              Learn more
-            </a>
-          </p>
-        </div>
-        <div className="bg-green-700 px-4 py-5 rounded-lg hover:shadow-lg transform transition-transform duration-300 hover:scale-105 text-left">
-          <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#eeeb52] to-[#fbfcf3]">
-            Mobile App Development
-          </h3>
-          <p className="mt-2 text-gray-300">
-            Developing native and cross-platform mobile apps for a seamless user experience on any device.
-          </p>
-          <p className="mt-2">
-            <a href="#" className="text-gray-300 hover:text-white hover:underline">
-              Learn more
-            </a>
-          </p>
+
+          <ul className="mt-8 space-y-3 w-full">
+            <li>
+              <h3 className="text-xl font-bold py-2 ">Office Sales System</h3>
+              <img
+                src="os-login-page.png"
+                alt="Office Sales System Login Page"
+              />
+              <p className="text-gray-300 py-5 text-justify">
+                A custom internal e-commerce platform for Monheim Distributors
+                Inc., built with React, Node.js, Express.js, and MSSQL. The
+                system allows employees to browse and manage purchases, with a
+                dedicated module for order approval and receiving, including CSV
+                export functionality for streamlined reporting.
+              </p>
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
