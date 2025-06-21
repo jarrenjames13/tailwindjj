@@ -2,7 +2,7 @@ import React from "react";
 
 const Expertise = () => {
   return (
-    <div className="flex flex-col text-white items-center text-center py-6 gap-6 px-4" id="projects">
+    <div className="flex flex-col text-white items-center text-center py-6 gap-6 px-4" id="expertise">
       <h1 className="font-bold text-2xl sm:text-3xl">Expertise and Services</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-6xl">
         <div className="bg-green-700 px-4 py-5 rounded-lg hover:shadow-lg transform transition-transform duration-300 hover:scale-105 text-left">

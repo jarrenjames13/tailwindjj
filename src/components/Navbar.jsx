@@ -19,6 +19,9 @@ const Navbar = () => {
           <a href="#about">About</a>
         </li>
         <li className="p-4">
+          <a href="#expertise">Expertise</a>
+        </li>
+        <li className="p-4">
           <a href="#projects">Projects</a>
         </li>
         <li className="p-4">
@@ -48,6 +51,9 @@ const Navbar = () => {
           </li>
           <li className="p-4 border-b border-b-gray-700">
             <a href="#about" onClick={handleNav}>About</a>
+          </li>
+          <li className="p-4 border-b border-b-gray-700">
+            <a href="#expertise" onClick={handleNav}>Expertise</a>
           </li>
           <li className="p-4 border-b border-b-gray-700">
             <a href="#projects" onClick={handleNav}>Projects</a>
