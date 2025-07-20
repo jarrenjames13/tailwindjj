@@ -1,6 +1,29 @@
-import React from "react";
+import React, { useState } from "react"; 
 
 const Projects = () => {
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
+  // Images for the Language Loop carousel
+  const languageLoopImages = [
+    { src: "homepage.png", alt: "Language Loop App Preview" },
+    { src: "login.png", alt: "Login page" },
+    { src: "signup.png", alt: "Signup page" }
+  ];
+  
+  // Navigation functions
+  const goToPrevious = () => {
+    setCurrentImageIndex((prevIndex) => 
+      prevIndex === 0 ? languageLoopImages.length - 1 : prevIndex - 1
+    );
+  };
+  
+  const goToNext = () => {
+    setCurrentImageIndex((prevIndex) => 
+      prevIndex === languageLoopImages.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
   return (
     <section
       className="text-white flex flex-col items-center text-center bg-[#2d2e2d] py-6 px-4 h-auto"
@@ -31,6 +54,64 @@ const Projects = () => {
                 system allows employees to browse and manage purchases, with a
                 dedicated module for order approval and receiving, including CSV
                 export functionality for streamlined reporting.
+              </p>
+            </li>
+
+            <li>
+              <h3 className="text-xl font-bold py-2 ">
+                Language Loop - MERN STACK SOCIAL MEDIA APP
+              </h3>
+              
+              {/* Replace multiple image tags with carousel */}
+              <div className="relative">
+                <img
+                  src={languageLoopImages[currentImageIndex].src}
+                  alt={languageLoopImages[currentImageIndex].alt}
+                  className="w-full h-auto object-contain mx-auto"
+                />
+                
+                {/* Navigation buttons */}
+                <button 
+                  onClick={goToPrevious}
+                  className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-r-md hover:bg-opacity-75"
+                  aria-label="Previous image"
+                >
+                  &#10094;
+                </button>
+                
+                <button 
+                  onClick={goToNext}
+                  className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-l-md hover:bg-opacity-75"
+                  aria-label="Next image"
+                >
+                  &#10095;
+                </button>
+                
+                {/* Optional: Add dots indicator */}
+                <div className="flex justify-center mt-2">
+                  {languageLoopImages.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentImageIndex(index)}
+                      className={`h-2 w-2 mx-1 rounded-full ${
+                        index === currentImageIndex ? "bg-white" : "bg-gray-500"
+                      }`}
+                      aria-label={`Go to slide ${index + 1}`}
+                    />
+                  ))}
+                </div>
+              </div>
+              
+              <p className="text-gray-300 py-5 text-justify">
+                A full-stack social media platform designed specifically for
+                language learning and cultural exchange. Built with the MERN
+                stack (MongoDB, Express.js, React, Node.js) and enhanced with
+                TailwindCSS. Features include real-time messaging with typing
+                indicators, comprehensive notification system, 1-on-1 and group
+                video conferencing, screen sharing, JWT authentication, and 32
+                customizable UI themes. The application implements robust error
+                handling and is optimized for deployment on cloud platforms with
+                Stream for enterprise-level scalability.
               </p>
             </li>
           </ul>
