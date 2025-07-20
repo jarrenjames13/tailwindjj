@@ -102,50 +102,36 @@ const Projects = () => {
                 Language Loop - MERN STACK SOCIAL MEDIA APP
               </h3>
               
-              {/* Sliding Carousel Implementation */}
+              {/* Replace multiple image tags with carousel */}
               <div 
-                className="relative overflow-hidden"
+                className="relative"
                 onMouseEnter={() => setIsPaused(true)}
                 onMouseLeave={() => setIsPaused(false)}
-                ref={carouselRef}
               >
-                {/* Carousel Track */}
-                <div className="flex transition-transform duration-300 ease-in-out" 
-                     style={{ 
-                       transform: `translateX(-${currentImageIndex * 100}%)`,
-                       width: `${languageLoopImages.length * 100}%` 
-                     }}>
-                  {languageLoopImages.map((image, index) => (
-                    <div key={index} className="w-full flex-shrink-0">
-                      <img
-                        src={image.src}
-                        alt={image.alt}
-                        className="w-full h-auto object-contain mx-auto"
-                      />
-                    </div>
-                  ))}
-                </div>
+                <img
+                  src={languageLoopImages[currentImageIndex].src}
+                  alt={languageLoopImages[currentImageIndex].alt}
+                  className={`w-full h-auto object-contain mx-auto transition-transform duration-300 ${isTransitioning ? "scale-95" : "scale-100"}`}
+                />
                 
                 {/* Navigation buttons */}
                 <button 
                   onClick={goToPrevious}
-                  className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-r-md hover:bg-opacity-75 z-10"
+                  className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-r-md hover:bg-opacity-75"
                   aria-label="Previous image"
-                  disabled={isTransitioning}
                 >
                   &#10094;
                 </button>
                 
                 <button 
                   onClick={goToNext}
-                  className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-l-md hover:bg-opacity-75 z-10"
+                  className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-l-md hover:bg-opacity-75"
                   aria-label="Next image"
-                  disabled={isTransitioning}
                 >
                   &#10095;
                 </button>
                 
-                {/* Dots indicator */}
+                {/* Optional: Add dots indicator */}
                 <div className="flex justify-center mt-2">
                   {languageLoopImages.map((_, index) => (
                     <button
@@ -155,7 +141,6 @@ const Projects = () => {
                         index === currentImageIndex ? "bg-white" : "bg-gray-500"
                       }`}
                       aria-label={`Go to slide ${index + 1}`}
-                      disabled={isTransitioning}
                     />
                   ))}
                 </div>
