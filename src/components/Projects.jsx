@@ -1,8 +1,9 @@
-import React, { useState } from "react"; 
+import React, { useState, useEffect } from "react"; 
 
 const Projects = () => {
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
   
   // Images for the Language Loop carousel
   const languageLoopImages = [
@@ -23,6 +24,20 @@ const Projects = () => {
       prevIndex === languageLoopImages.length - 1 ? 0 : prevIndex + 1
     );
   };
+
+  // Auto-cycle images every 4 seconds
+  useEffect(() => {
+    let interval;
+    if (!isPaused) {
+      interval = setInterval(() => {
+        goToNext();
+      }, 2000); 
+    }
+    
+    return () => {
+      if (interval) clearInterval(interval);
+    };
+  }, [currentImageIndex, isPaused]);
 
   return (
     <section
@@ -63,7 +78,11 @@ const Projects = () => {
               </h3>
               
               {/* Replace multiple image tags with carousel */}
-              <div className="relative">
+              <div 
+                className="relative"
+                onMouseEnter={() => setIsPaused(true)}
+                onMouseLeave={() => setIsPaused(false)}
+              >
                 <img
                   src={languageLoopImages[currentImageIndex].src}
                   alt={languageLoopImages[currentImageIndex].alt}
