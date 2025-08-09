@@ -29,15 +29,15 @@ const Home = () => {
 
         <div className="text-white flex flex-col sm:flex-row justify-center items-center">
           <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold py-2 sm:py-4 p-2">
-            an aspiring
+            a
           </p>
           <ReactTyped
             className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold md:pl-4 py-2 sm:py-4 p-2"
-            strings={["Programmer", "Fullstack Developer", "Game Developer"]}
+            strings={[" Fullstack Developer", "Software Engineer",  "Computer Engineer"]}
             typeSpeed={120}
             backSpeed={140}
             loop
-            aria-label="Aspiring roles: Programmer, Fullstack Developer, Game Developer"
+            aria-label="roles: Software Engineer, Computer Engineer, Fullstack Developer"
           />
         </div>
 

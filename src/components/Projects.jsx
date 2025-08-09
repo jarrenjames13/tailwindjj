@@ -117,7 +117,7 @@ const Projects = () => {
                 {/* Navigation buttons */}
                 <button 
                   onClick={goToPrevious}
-                  className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-r-md hover:bg-opacity-75"
+                  className="cursor-pointer absolute left-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-r-md hover:bg-opacity-75"
                   aria-label="Previous image"
                 >
                   &#10094;
@@ -125,7 +125,7 @@ const Projects = () => {
                 
                 <button 
                   onClick={goToNext}
-                  className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-l-md hover:bg-opacity-75"
+                  className="cursor-pointer absolute right-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-l-md hover:bg-opacity-75"
                   aria-label="Next image"
                 >
                   &#10095;
@@ -137,7 +137,7 @@ const Projects = () => {
                     <button
                       key={index}
                       onClick={() => goToSlide(index)}
-                      className={`h-2 w-2 mx-1 rounded-full ${
+                      className={`h-2 w-2 mx-1 rounded-full cursor-pointer ${
                         index === currentImageIndex ? "bg-white" : "bg-gray-500"
                       }`}
                       aria-label={`Go to slide ${index + 1}`}
